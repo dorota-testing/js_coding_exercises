@@ -10,27 +10,39 @@
 </head>
 
 <body>
-  <script src="challenges/exercise001.js"></script>
+  <script src="challenges/exercise002.js"></script>
   <script>
-  let str = 'codinga';
-  const users = [
-      { name: "Heather", OS: "Ubuntu 18.04", type: "Linux" },
-      { name: "Paul", OS: "Ubuntu 16.04", type: "Linux" },
-      { name: "Sheila", OS: "Windows 10", type: "Windows" },
-      { name: "Jane", OS: "Mint 19.1", type: "Linux" },
-      { name: "Jen", OS: "CentOS 7", type: "Linux" },
-      { name: "David", OS: "Fedora 28", type: "Linux" },
-      { name: "Pedro", OS: "Windows 95", type: "Windows" }
-    ];
-let arr = ["jest", "mocha", "rspec", "jasmine", "selenium"];
-  //console.log(capitalize(str));
-  //console.log(generateInitials('Lorem','Ipsum'));
-  //console.log(addVAT(33.5, 17.5));
-  //console.log(getSalePrice(100, 33.3));
-  console.log(getMiddleCharacter(str));
-  //console.log(reverseWord('foo'));
- // console.log(reverseAllWords(arr));
-  console.log(countLinuxUsers(users));
+  let str = 'coding';
+  const sandwich = {
+      bread: "Sourdough",
+      fillings: ["brie", "relish", "lettuce"],
+      accompaniment: "crisps"
+    };
+  console.log(getFillings(sandwich));
+
+  const person = {
+      name: "Mohammed",
+      city: "Manchester",
+      age: 23
+    };
+  console.log(isFromManchester(person));
+
+  let numberOfPeople = 84;
+  console.log(getBusNumbers(numberOfPeople));
+
+  const arr = ["dog", "sheep", "dog", "sheep", "chicken"];
+  console.log(countSheep(arr));
+
+  const person2 = {
+      name: "Mohammed",
+      age: 23,
+      address: {
+        line1: "1a Pool Road",
+        city: "Manchester",
+        postCode: "M16 8DR"
+      }
+    };
+  console.log(hasMPostCode(person2));
 
   </script>
 </body>
