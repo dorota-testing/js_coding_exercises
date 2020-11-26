@@ -10,40 +10,52 @@
 </head>
 
 <body>
-  <script src="challenges/exercise002.js"></script>
+  <script src="challenges/exercise003.js"></script>
   <script>
-  let str = 'coding';
-  const sandwich = {
-      bread: "Sourdough",
-      fillings: ["brie", "relish", "lettuce"],
-      accompaniment: "crisps"
-    };
-  console.log(getFillings(sandwich));
+    const nums = [2, 4, 6];
+    console.log(getSquares(nums));
 
-  const person = {
-      name: "Mohammed",
-      city: "Manchester",
-      age: 23
-    };
-  console.log(isFromManchester(person));
+    const words = ["my", "variable"];
+    console.log(camelCaseWords(words));
 
-  let numberOfPeople = 84;
-  console.log(getBusNumbers(numberOfPeople));
+    const people = [
+      { name: "Billy", subjects: ["welsh", "spanish"] },
+      { name: "Claude", subjects: ["chemistry", "biology", "music"] },
+      { name: "Aneeta", subjects: ["physics", "maths", "computing", "music"] }
+    ];
+    console.log(getTotalSubjects(people));
 
-  const arr = ["dog", "sheep", "dog", "sheep", "chicken"];
-  console.log(countSheep(arr));
-
-  const person2 = {
-      name: "Mohammed",
-      age: 23,
-      address: {
-        line1: "1a Pool Road",
-        city: "Manchester",
-        postCode: "M16 8DR"
+    const menu = [
+      {
+        name: "tofu fritters",
+        ingredients: ["tofu", "egg yolk", "breadbrumbs", "paprika"]
+      },
+      {
+        name: "black bean curry",
+        ingredients: ["black beans", "garam masala", "rice"]
+      },
+      {
+        name: "chocolate tiffin",
+        ingredients: [
+          "dark chocolate",
+          "egg",
+          "flour",
+          "brown sugar",
+          "vanilla essence"
+        ]
+      },
+      {
+        name: "hummus",
+        ingredients: ["chickpeas", "tahini", "lemon", "garlic", "salt"]
       }
-    };
-  console.log(hasMPostCode(person2));
+    ];
+    let ingredient = "milk";   
+    console.log(checkIngredients(menu, ingredient));
 
+    let arr1 = [1, 55, 4, 3, 7, 8];
+    let arr2 = [55, 23, 65, 0];
+    console.log(duplicateNumbers(arr1, arr2));
+  
   </script>
 </body>
 </html>
