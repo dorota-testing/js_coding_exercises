@@ -4,57 +4,93 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Page</title>
+  <title>JS Exercises</title>
   <h1>Tech Returners' JS exercises</h1>
 
 </head>
 
 <body>
-  <script src="challenges/exercise003.js"></script>
+  <script src="challenges/exercise004.js"></script>
   <script>
-    const nums = [2, 4, 6];
-    console.log(getSquares(nums));
+    const nums = [8, 1, 1.3, 0.9, 0.4, -1];
+    console.log(findSmallNums(nums));
 
-    const words = ["my", "variable"];
-    console.log(camelCaseWords(words));
+    const names = ["Sally", "Dave", "Susan", "Geoff", "Riley", "Sam"];
+    console.log(findNamesBeginningWith(names, "D"));
 
-    const people = [
-      { name: "Billy", subjects: ["welsh", "spanish"] },
-      { name: "Claude", subjects: ["chemistry", "biology", "music"] },
-      { name: "Aneeta", subjects: ["physics", "maths", "computing", "music"] }
+    const words = [
+      "to eat",
+      "fajita",
+      "mouse",
+      "to sneak",
+      "to squeak",
+      "cheesemonger"
     ];
-    console.log(getTotalSubjects(people));
+    console.log(findVerbs(words));
+    
+    const nums1 = [1, 3.5, 2.1, 1, 4, 9];
+    console.log(getIntegers(nums1));
 
-    const menu = [
+    const users = [
       {
-        name: "tofu fritters",
-        ingredients: ["tofu", "egg yolk", "breadbrumbs", "paprika"]
+        id: 12,
+        data: {
+          city: {
+            id: 1,
+            displayName: "MCR"
+          }
+        }
       },
       {
-        name: "black bean curry",
-        ingredients: ["black beans", "garam masala", "rice"]
+        id: 44,
+        data: {
+          city: {
+            id: 4,
+            displayName: "LVP"
+          }
+        }
       },
       {
-        name: "chocolate tiffin",
-        ingredients: [
-          "dark chocolate",
-          "egg",
-          "flour",
-          "brown sugar",
-          "vanilla essence"
-        ]
+        id: 5,
+        data: {
+          city: {
+            id: 4,
+            displayName: "LVP"
+          }
+        }
       },
       {
-        name: "hummus",
-        ingredients: ["chickpeas", "tahini", "lemon", "garlic", "salt"]
+        id: 2,
+        data: {
+          city: {
+            id: 7,
+            displayName: "GLW"
+          }
+        }
       }
     ];
-    let ingredient = "milk";   
-    console.log(checkIngredients(menu, ingredient));
+    console.log(getCities(users));
 
-    let arr1 = [1, 55, 4, 3, 7, 8];
-    let arr2 = [55, 23, 65, 0];
-    console.log(duplicateNumbers(arr1, arr2));
+    const nums2 = [36, 77, 12, 355, 92, 5];
+    console.log(getSquareRoots(nums2));
+
+    const sentences = [
+    "You should specify a license for your package so that people know how they are permitted to use it",
+    "The main field is a module ID that is the primary entry point to your program",
+    "The repository field should specify the place where your code lives",
+    "The 'scripts' property is a dictionary containing script commands that are run at various times in the lifecycle of your package",
+    "Dependencies are specified in a simple object that maps a package name to a version range",
+    "It's best to map these additional items such as a test framework, which is not needed for running your project, in a devDependencies object",
+    "If you plan to publish your package, the most important things in your package.json are the name and version fields as they will be required",
+    "If you don’t plan to publish your package, the name and version fields are optional",
+    "Put keywords in it. It's an array of strings. This helps people discover your package as it's listed in npm search",
+    "The bugs field should hold the url to your project’s issue tracker and / or the email address to which issues should be reported."
+  ];
+    console.log(findSentencesContaining(sentences, "license"));
+
+    const triangles = [[6, 7, 10], [9, 3, 6], [6, 3, 5], [6, 13, 12], [7, 12, 8]];
+    console.log(getLongestSides(triangles));
+
   
   </script>
 </body>
