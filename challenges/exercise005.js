@@ -101,7 +101,6 @@ const getWordFrequencies = str => {
     if(arrPunct != null){
         //console.log(arrPunct.length);
         let cutOff = word.length - arrPunct.length;
-        strPunctuation = word.substring(cutOff);
         myWord = word.substring(0, cutOff);
         //console.log(myWord);
     }

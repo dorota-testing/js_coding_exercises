@@ -81,7 +81,7 @@ function countLinuxUsers(users) {
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
   // Add your code here!
-  myNumber = 0;
+  let myNumber = 0;
   for (const score of scores){
     myNumber = myNumber+score;
   }
