@@ -6,6 +6,13 @@
  */
 const sumMultiples = arr => {
   if (arr === undefined) throw new Error("arr is required");
+  let myNumber = 0;
+  for(const num of arr){
+    if(num % 3 === 0 || num % 5 === 0){
+      myNumber = myNumber + num;
+    }
+  }
+  return myNumber;
 };
 
 /**
@@ -15,6 +22,15 @@ const sumMultiples = arr => {
  */
 const isValidDNA = str => {
   if (str === undefined) throw new Error("str is required");
+  const arrDna = ["C", "G", "T", "A"];
+  let letters = str.split('');
+  let myBool = true;
+  for (const letter of letters){
+    if(!arrDna.includes(letter)){
+      myBool = false;
+    }
+  }
+  return myBool;
 };
 
 /**
@@ -24,6 +40,13 @@ const isValidDNA = str => {
  */
 const getComplementaryDNA = str => {
   if (str === undefined) throw new Error("str is required");
+  const objDNA = {C:"G", G:"C", T:"A", A:"T"};
+  let response = '';
+  let letters = str.split('');
+  for (const letter of letters){
+    response = response + objDNA[letter];
+  }
+  return response;
 };
 
 /**
@@ -33,6 +56,12 @@ const getComplementaryDNA = str => {
  */
 const isItPrime = n => {
   if (n === undefined) throw new Error("n is required");
+  for(let i = 2; i < n; i++) {
+      if(n % i === 0) {
+          return false;
+      }
+  }
+  return true;
 };
 
 /**
@@ -49,6 +78,15 @@ const isItPrime = n => {
 const createMatrix = (n, fill) => {
   if (n === undefined) throw new Error("n is required");
   if (fill === undefined) throw new Error("fill is required");
+  let myArray = [];
+  for(let i = 0; i < n; i++) {
+    let arr = [];
+    for(let i = 0; i < n; i++) {
+       arr.push(fill);
+    }
+    myArray.push(arr);
+  }
+  return myArray;
 };
 
 /**
@@ -66,6 +104,18 @@ const createMatrix = (n, fill) => {
 const areWeCovered = (staff, day) => {
   if (staff === undefined) throw new Error("staff is required");
   if (day === undefined) throw new Error("day is required");
+  let myNumber = 0;
+  for (let key in staff) {
+    let rota = staff[key].rota;
+    if (rota.includes(day)) {
+      ++myNumber;
+    }
+  } 
+    if(myNumber < 3){
+      return false;
+    } else {
+      return true;
+    }
 };
 
 module.exports = {

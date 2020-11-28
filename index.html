@@ -15,10 +15,11 @@
     const arr = [1,2,3,4,5];
     console.log(sumMultiples(arr)); // 8 
 
-    console.log(isValidDNA("ABCDE")); //  A valid DNA string may contain characters C, G, T or A only.
+    console.log(isValidDNA("TGAC")); //  A valid DNA string may contain characters C, G, T or A only.
+    
     console.log(getComplementaryDNA("ACTG")); // TGAC 
 
-    console.log(isItPrime(7)); // bool. Prime can only be divided evenly by 1 and itself
+    console.log(isItPrime(5)); // bool. Prime can only be divided evenly by 1 and itself
     
     console.log(createMatrix(3, "foo"));
     /* [
@@ -31,9 +32,12 @@
 const staff =  [
    { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
    { name: "Pedro", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
+   { name: "Lorem", rota: ["Monday", "Tuesday", "Friday"] },
+   { name: "Ipsum", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
+   { name: "Dolor", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
   ];
 
-  console.log(areWeCovered(staff, "Tuesday"));
+  console.log(areWeCovered(staff, "Monday")); //Tuesday-> true, Monday ->false
   
   </script>
 </body>
